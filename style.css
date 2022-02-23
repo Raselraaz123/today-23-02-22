@@ -3,3 +3,14 @@ border: 5px solid pink;
 margin: 10px;
 background-color: aquamarine;
 }
+
+#allcountry{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.go img{
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+    
+}
