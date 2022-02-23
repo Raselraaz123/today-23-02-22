@@ -59,3 +59,22 @@ const radataupData = (data) => {
     }
     
 }
+
+
+const randomephoto = () => {
+    fetch('https://randomuser.me/api/?results=50')
+        .then(res => res.json())
+    .then(data=>randomdata(data))
+}
+
+const randomdata=(data) => {
+    console.log(data.results)
+    const newphoto = data.results
+    const innerHTML2 = document.getElementById('umpepol');
+    for (const forg of newphoto) {
+        const div = document.createElement('div');
+        div.classList.add('tom')
+        div.innerHTML =`new img: <img src="${forg.picture.medium}">`
+        innerHTML2.appendChild(div)
+    }
+}
